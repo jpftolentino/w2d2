@@ -50,3 +50,9 @@ const --- const in C++/C
 --> Backend - the ones who determine what happens when a client makes a request... Essentially we're anticipating what the client will request for and handling the request
 
 --> `Put It All Together` - https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/ -- basic server setup
+
+-->Don't forget to use npm init when installing express. You need to initialize package.json
+
+-- HOW JAVASCRIPT EVOLVE
+- No one cared about javaScript, designed as a netscape plugin
+- Google Maps javaScript before and after
