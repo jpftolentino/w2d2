@@ -1,0 +1,52 @@
+HOW TO NODE EXPRESS W2D2
+
+--Expressjs/guide web page (make sure to read the document thoroughly)
+
+- install express
+-> npm install express (Install express Library)
+
+- declare express libraries and create a constant of express variable
+-> const express = require('express');
+-> const app = express();
+
+--> learn what app.get does and what the functions argument's are used for
+
+--> Node monitor tool that automatically restarts when the content of the file is changed
+
+--> Create a `views` directory in root of webserver folder and you can add all of your images into one file and
+references them locally. ----- ejs files are html templates
+
+app.set("view engine","ejs");
+
+app.get('/motreal', function(req, res) {
+  res.render('motreal'); //go tot he vies folder and look for a file called montreal
+})
+
+app.get('/city/:someCity', function(req, res) {
+  console.log('New city: ', req.params.someCity);
+  res.send('Comming to this city soon...');
+})
+
+
+-----------HOW TO ORGANIZE YOUR CODE BASED ON THE WEBSITES NEEDS AND HOW YOUR SERVER BEHAVES-------------------------------
+RESTful API -- create servers when client requests for a certain resource
+
+--> I have a website running on Digital Ocean, do I need to install express.js in the root directory of the server ?
+
+--> WHAT IS USER AGENT ?!?!
+
+//MORE NOTES
+
+Template Literals & String Inerpolation
+
+var name = 'Alice';
+console.log(`Hello', ${name}!`); //note the back ticks
+
+let = var
+var - creates a variable scoped within its nearest parent function
+let - scopes the variable to the nearest block
+const --- const in C++/C
+
+--> Backend - the ones who determine what happens when a client makes a request... Essentially we're anticipating what the client will request for and handling the request
+
+--> `Put It All Together` - https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/ -- basic server setup
